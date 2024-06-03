@@ -1,5 +1,5 @@
 FROM ubuntu:22.04
-ADD rootfs.tar /
+ADD rootfs.tar.gz /
 LABEL name="pop!_os" \
   vendor="system76" 
 COPY rootfs.pop-os-sources /etc/apt/sources.list.d/pop-os.sources
