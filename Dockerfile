@@ -3,5 +3,8 @@ ADD rootfs.tar.gz /
 LABEL name="pop!_os" \
   vendor="system76" \
   org.opencontainers.image.source="ghcr.io/beautifuljunkie/pop-os-container"
-
+COPY trusted.* /etc/apt/
+COPY toetc/* /etc/
+RUN echo "" /etc/apt/sources.list
+COPY rootfs.pop-os-sources /etc/apt/sources.list.d/
 CMD ["bash"]
